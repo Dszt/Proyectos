@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/insertarEscrito.css">
+</head>
+<body>
+    <div class="container">
+        <h3>¿Algo en mente? ¡Escribelo antes que sea tarde!</h3>
+        <div class="buttons">
+            <button class="google-btn">
+                <picture><img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="logo-google"/></picture>
+                <span>Registrarse con google</span>
+            </button>
+            <button class="twitter-btn">
+                <picture> <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3Dblack%2BTwitter&psig=AOvVaw10dZiRnLXpH4nzEBX65qGC&ust=1696448701352000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJj_sJLS2oEDFQAAAAAdAAAAABAE" alt="logo-twitter"></picture>
+                <span>Twitter</span>
+            </button>
+        </div>
+        <div class="separator">
+            <hr>
+            <span>Escribe los datos aquí</span>
+            <hr>
+        </div>
+        <form action="" method="">
+            <div class="form-action">
+                <label form="name">
+                    <span>Apodo del autor</span>
+                    <input id="name" name="name" />
+                </label>
+                <label form="Username">
+                    <span>Nombre del escrito</span>
+                    <input id="Username" name="Username" />
+                </label>
+                <label form="nota">
+                    <span>Notas</span>
+                    <textarea>Escribe tu notis aquí</textarea>
+                </label>
+            </div>
+            <label for="checkbox" class="checkbox-label">
+                <input type="checkbox" id="checkbox">
+                <span>Acepto los terminos y condiciones de uso</span>
+            </label>
+            <button type="submit" class="submit-btn">Create an account</button>
+        </form>
+    </div>   
+    <script>
+  
+        const btn_insertar1 = document.getElementById("formulario");
+        btn_insertar1.addEventListener("submit",function(e){
+         e.preventDefault();
+         copiautor = document.getElementById("autor").value;
+         copiabiografia = document.getElementById("biografia").value;
+         copiapgenero = document.getElementById("genero").value;
+         copiapcantidad = document.getElementById("cantidad").value;
+         copiapctitulo = document.getElementById("titulo").value;
+      
+      
+         //alert(copiaprioridad);
+         
+         const data = { //construyo el json
+          autor : copiautor,
+          biografia: copiabiografia,
+          genero_escrito : copiapgenero,
+          cantidad_paginas : copiapcantidad,
+          titulo : copiapctitulo
+        };
+      
+        fetch('http://localhost:8080/Escritos/', {
+          method: 'POST', // or 'PUT'
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })//cierre del fetch
+          .then((response) => response.json())
+          .then((data) => {
+            console.log('Success:', data);
+            alert("Insertado con exito");
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      
+        })
+    </script>
+</body>  
+</html>

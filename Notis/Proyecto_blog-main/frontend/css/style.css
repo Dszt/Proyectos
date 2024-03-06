@@ -1,0 +1,31 @@
+
+.contenedor{
+  display: inline-block;
+   width: 80%;
+}
+/* Otros estilos existentes */
+
+.todo {
+  margin-top: 30px;
+  background-color: #ff8cc6; /* Cambia el color según tus preferencias */
+  opacity: 90%;
+  padding: 15px; /* Añade un relleno para separar el contenido del borde */
+  border-radius: 8px; /* Añade esquinas redondeadas para un aspecto más agradable */
+}
+
+
+.recent-posts h2 {
+  font-size: 20px;
+}
+
+.recent-posts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recent-posts li {
+  margin-bottom: 20px;
+}
+
+
+/* Otros estilos existentes */

@@ -1,0 +1,50 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    background-image: url(../img/9353854.jpg);
+    background-size: 100vw ;
+}
+#main-content .center h1{
+    font-size:xx-large;
+
+}
+.center{
+    text-align: center;   
+}
+/*Hay que redimensionar esta imagen a una pequeña*/
+.imagen-cute { width: 30px; height: 30px; }
+#main-header {
+    background-color: #DAC4F7; /* Color de fondo de la cabecera */
+    color: black; /* Color del texto en la cabecera */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Distribuir elementos en el espacio disponible */
+    align-items: center; /* Centrar verticalmente los elementos en la cabecera */ 
+    border-radius: 5px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 2px solid #fa8fb1; /* Añade un subrayado al pasar el ratón por encima */
+}
