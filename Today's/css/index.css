@@ -10,8 +10,7 @@
     font-size: 20px;
 }
 #main-header {
-    background-color: #DAC4F7; /* Color de fondo de la cabecera */
-    color: black; /* Color del texto en la cabecera */
+    background-color: #333; /* Color de fondo de la cabecera */
     padding: 10px;
     display: flex;
     justify-content: space-between; /* Distribuir elementos en el espacio disponible */
@@ -26,7 +25,9 @@
 nav {
     margin-top: 10px;
 }
-
+header{
+    border-bottom: 1px solid white;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -37,8 +38,49 @@ li {
     display: inline;
     margin-right: 15px;
 }
+a :hover{
+    border-bottom: 1px solid white;
+}
 
 a {
+    text-decoration:none;
+    color: white;
+}
+.news-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.main-news,
+.other-news {
+    width: 48%; /* Ajusta el ancho según tus preferencias */
+}
+
+.other-news {
+    background-color: #f2f2f2; /* Color de fondo para la sección de otras noticias */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Estilos adicionales según sea necesario */
+
+/* Otros estilos existentes */
+
+footer {
+    background-color: #333; /* Color de fondo del pie de página */
+    color: white; /* Color del texto en el pie de página */
+    padding: 20px; /* Añade espacio alrededor del contenido del pie de página */
+    text-align: center; /* Centra el texto en el pie de página */
+}
+
+footer a {
+    color: white; /* Color de los enlaces en el pie de página */
     text-decoration: none;
 }
 
+footer a:hover {
+    border-bottom: 1px solid white; /* Efecto de subrayado al pasar el ratón por encima de los enlaces */
+}
+
+/* Otros estilos existentes */
