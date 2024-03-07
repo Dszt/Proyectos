@@ -38,7 +38,8 @@ li {
     display: inline;
     margin-right: 15px;
 }
-a :hover{
+
+header a:hover{
     border-bottom: 1px solid white;
 }
 
@@ -72,8 +73,12 @@ footer {
     color: white; /* Color del texto en el pie de página */
     padding: 20px; /* Añade espacio alrededor del contenido del pie de página */
     text-align: center; /* Centra el texto en el pie de página */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    
 }
-
 footer a {
     color: white; /* Color de los enlaces en el pie de página */
     text-decoration: none;
